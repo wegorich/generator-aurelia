@@ -1,6 +1,6 @@
 {
   "name": "generator-aurelia-base",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Yeoman controls and views generator for the JavaScript Framework Aurelia",
   "keywords": [
     "yeoman-generator",
@@ -9,10 +9,6 @@
     "durandal"
   ],
   "dependencies": {
-    "bluebird": "^2.9.34",
-    "download-github-repo": "^0.1.3",
-    "github": "git+http://github.com/ludovicderochethales/node-github.git",
-    "jspm": "^0.16.1",
     "yeoman-generator": "^0.18.0"
   },
   "repository": {
