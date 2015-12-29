@@ -11,7 +11,7 @@ var Generator = module.exports = yeoman.generators.Base.extend({
         console.log(' ');
         console.log('aurelia-base:component NAME');
         console.log('aurelia-base:example NAME');
-        console.log('aurelia-base:page NAME');
+        console.log('aurelia-base:view NAME');
         console.log(' ');
         console.log('NOTE:');
         console.log('Name can be a path');

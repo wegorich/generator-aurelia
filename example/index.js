@@ -1,23 +1,24 @@
 var generators = require('yeoman-generator');
 
 var basePath = 'src/bootstrap/examples/example_';
-var path = require('../path').bind(null, null, null, basePath);
+var helpers = require('../helpers');
+var path = helpers.path;
 
 module.exports = generators.NamedBase.extend({
   generateAureliaVM: function() {
     this.fs.copyTpl(
       this.templatePath('vm.js'),
-      this.destinationPath(path(this.name, '.js')),
-      { Name: this.name }
+      this.destinationPath(path(this.name, '.js', basePath)),
+      { Name: helpers.toCamelCase(this.name) }
     );
   },
 
   generateAureliaView: function() {
     this.fs.copyTpl(
       this.templatePath('view.html'),
-      this.destinationPath(path(this.name, '.html')),
+      this.destinationPath(path(this.name, '.html', basePath)),
       {
-        Name: this.name,
+        Name: helpers.toCamelCase(this.name),
         Hello: '${hello}'
       }
     );

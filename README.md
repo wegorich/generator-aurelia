@@ -24,7 +24,7 @@ This generator will use [JSPM](http://jspm.io), Aurelias package manager of choi
 
 3. Inside your porject just do
   ```shell
-  yo aurelia:page YOURPAGENAME
+  yo aurelia:view YOURPAGENAME
 
   ```
   OR
