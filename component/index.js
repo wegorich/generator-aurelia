@@ -1,14 +1,13 @@
 var generators = require('yeoman-generator');
 
-var basePath = 'src/';
-var path = require('../path');
+var basePath = 'src/_components/';
+var path = require('../path').bind(null, null, null, basePath);
 
 module.exports = generators.NamedBase.extend({
-
     generateAureliaVM: function () {
         this.fs.copyTpl(
             this.templatePath('vm.js'),
-            this.destinationPath(path(this.name, '.js', 'src/' + this.name + '/')),
+            this.destinationPath(path(this.name, '.js')),
             {Name: this.name}
         );
     },
@@ -16,12 +15,11 @@ module.exports = generators.NamedBase.extend({
     generateAureliaView: function () {
         this.fs.copyTpl(
             this.templatePath('view.html'),
-            this.destinationPath(path(this.name, '.html', 'src/' + this.name + '/'),
-                {
-                    Name: this.name,
-                    Hello: '${hello}'
-                }
-            )
+            this.destinationPath(path(this.name, '.html')),
+            {
+                Name: this.name,
+                Value: '${value}'
+            }
         );
     }
 });

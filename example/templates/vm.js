@@ -1,10 +1,9 @@
 import {inject} from 'aurelia-framework';
 
 @inject(Element)
-export class <%= Name %> {
+export class Example_<%= Name %> {
     constructor(element) {
       this.element = element;
-      this.hello = 'Welcome to the Aurelia Navigation App!';
     }
 
     attached() {

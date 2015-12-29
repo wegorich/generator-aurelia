@@ -1,6 +1,6 @@
 # generator-aurelia
 
-This is a Yeoman Generator for the [Skeleton App](https://github.com/aurelia/skeleton-navigation) of the [Aurelia](http://www.aurelia.io/) platform. It sets up a standard navigation-style app using gulp to build your ES6 code with [Babel](http://babeljs.io). Karma/Jasmine testing is configured as well.
+This is a Yeoman Generator for the [Components](http://aurelia.io/docs.html#/aurelia/framework/1.0.0-beta.1.0.6/doc/article/creating-components) of the [Aurelia](http://www.aurelia.io/) platform. It sets up a standard navigation-style app using gulp to build your ES6 code with [Babel](http://babeljs.io). Karma/Jasmine testing is configured as well.
 
 For more info please visit the official site: http://www.aurelia.io/
 
@@ -19,73 +19,22 @@ This generator will use [JSPM](http://jspm.io), Aurelias package manager of choi
 2. Install this generator
 
   ```shell
-  npm install -g generator-aurelia
+  npm install -g generator-aurelia-components
   ```
 
-3. Ensure that [Gulp](http://gulpjs.com/) is installed. If you need to install it, use the following command:
-
-  ```shell
-  npm install -g gulp
-  ```
-4. Ensure that [jspm](http://jspm.io/) is installed. If you need to install it, use the following command:
-
-  ```shell
-  npm install -g jspm
-  ```
-
-5. Create a new project folder and move into it in the terminal
-
-  ```shell
-  mkdir YOUR_PROJECT_NAME
-  cd YOUR_PROJECT_NAME
-  ```
-
-6. Use Github API Token if the generator prompts a rate limit error. Execute the following command:
-
-  ```shell
-  export GITHUB_TOKEN=YOUR_ACCESS_TOKEN
-  ```
-  
-  > Windows users should set a user environment variable called GITHUB_TOKEN with the value being your actual token. 
-
-7. Execute the following command
-
-  ```shell
-  yo aurelia
-  ```
-
-8. To run the app, execute the following command:
-
-  ```shell
-  gulp watch
-  ```
-9. Browse to [http://localhost:9000](http://localhost:9000) to see the app. You can make changes in the code found under `src` and the browser should auto-refresh itself as you save files.
-
-## Update the skeleton jspm dependencies
-If you're inside your skeleton folder you can run the following command to update your installation and get the latest versions of the dependencies used:
-
-  ```shell
-  yo aurelia:update
-  ```
-
-## Command line options
-
-### --skip-install
-yo aurelia --skip-install will skip the npm and jspm install.
-
-### --proxy
-yo aurelia --proxy=http://my.proxy:8080 will install the skeleton app resepecting the given proxy settings
-
-## Creating a new page
-In order to create a new Aurelia Page just enter the following command inside your project root:
-
+3. Inside your porject just do
   ```shell
   yo aurelia:page YOURPAGENAME
+
+  ```
+  OR
+  ```shell
+  yo aurelia:component YOURCOMPONENTNAME
+  ```
+  OR
+  ```shell
+  yo aurelia:example YOURCOMPONENTEXAMPLENAME
   ```
 
-> If you get an error like `Error: spawn git ENOENT` when executing the yo command, you should check whether GIT is installed and accessible from the command line
-
-This will create a View and ViewModel with the given name inside the ```./src``` folder
-
 ## Credits
-Thanks to Addy Osmani for his awesome [generator-boilerplate](https://github.com/addyosmani/generator-boilerplate) repo.
+Thanks to Vildan Softic for his awesome [generator-aurelia](https://github.com/zewa666/generator-aurelia) repo.
