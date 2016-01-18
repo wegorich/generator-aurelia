@@ -19,22 +19,31 @@ This generator will use [JSPM](http://jspm.io), Aurelias package manager of choi
 2. Install this generator
 
   ```shell
-  npm install -g generator-aurelia-components
+  npm install -g generator-aurelia-base
   ```
 
-3. Inside your porject just do
+3. Inside your project execute
   ```shell
-  yo aurelia:view YOURPAGENAME
+  yo aurelia-base:view YOURPAGENAME
 
   ```
   OR
   ```shell
-  yo aurelia:component YOURCOMPONENTNAME
+  yo aurelia-base:component YOURCOMPONENTNAME
   ```
   OR
   ```shell
-  yo aurelia:example YOURCOMPONENTEXAMPLENAME
+  yo aurelia-base:example YOURCOMPONENTEXAMPLENAME
   ```
 
-## Credits
-Thanks to Vildan Softic for his awesome [generator-aurelia](https://github.com/zewa666/generator-aurelia) repo.
+  If you don't want tests to be generated for your component, add the `notest` flag
+  ```shell
+  yo aurelia-base:component YOURCOMPONENTNAME --notest
+  ```
+
+4. Example
+  The following command will generate 3 files (namely `datepicker.html`, `datepicker.js` and `datepicker.spec.js`) in
+  ``src/_components/picker``:
+  ```shell
+  yo aurelia-base:component picker/datepicker
+  ```
