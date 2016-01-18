@@ -6,7 +6,7 @@ module.exports = {
         if (arr.length > 1) {
             name = arr[arr.length - 1];
             arr.splice(arr.length - 1);
-            return 'src/' + arr.join('/') + '/' + name + ext;
+            return basePath + arr.join('/') + '/' + name + ext;
         }
         else {
             return basePath + name + ext;
