@@ -1,6 +1,6 @@
 {
   "name": "generator-aurelia-base",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Yeoman controls and views generator for the JavaScript Framework Aurelia",
   "keywords": [
     "yeoman-generator",
