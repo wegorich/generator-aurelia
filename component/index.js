@@ -4,8 +4,6 @@ var basePath = 'src/_components/';
 var helpers = require('../helpers');
 var path = helpers.path;
 
-
-
 module.exports = generators.NamedBase.extend({
   generateAureliaVM: function () {
     this.fs.copyTpl(
@@ -16,7 +14,7 @@ module.exports = generators.NamedBase.extend({
   },
 
   generateAureliaTest: function () {
-    this.fs.copyTpl(
+    !this.options['notest'] && this.fs.copyTpl(
       this.templatePath('test.js'),
       this.destinationPath(path(this.name, '.spec.js', basePath)),
       {Name: helpers.toCamelCase(this.name)}
