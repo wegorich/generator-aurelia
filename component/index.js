@@ -9,7 +9,7 @@ module.exports = generators.NamedBase.extend({
     this.fs.copyTpl(
       this.templatePath('vm.js'),
       this.destinationPath(path(this.name, '.js', basePath)),
-      {Name: helpers.toCamelCase(this.name)}
+      {Name: helpers.toCamelCase(this.name.replace(/^.*\//, ''))}
     );
   },
 
@@ -17,7 +17,7 @@ module.exports = generators.NamedBase.extend({
     !this.options['notest'] && this.fs.copyTpl(
       this.templatePath('test.js'),
       this.destinationPath(path(this.name, '.spec.js', basePath)),
-      {Name: helpers.toCamelCase(this.name)}
+      {Name: helpers.toCamelCase(this.name.replace(/^.*\//, ''))}
     );
   },
 
